@@ -20,3 +20,4 @@ set nohlsearch
 set virtualedit=onemore
 set autoindent
 set guicursor=
+set spell

@@ -45,3 +45,13 @@ lua require("stefan")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 " SIMPLE AUTOPARIS SETTUP
 lua require('nvim-autopairs').setup{}
+
+lua << EOF
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = true,
+})
+EOF
