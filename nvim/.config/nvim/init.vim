@@ -27,6 +27,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 "tabline
 Plug 'ojroques/nvim-hardline'
+
+" Git signs on the left to see what is changed and stuff
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 "SET COLORSCHEME
