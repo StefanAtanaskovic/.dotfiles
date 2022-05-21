@@ -30,6 +30,8 @@ Plug 'ojroques/nvim-hardline'
 
 " Git signs on the left to see what is changed and stuff
 Plug 'lewis6991/gitsigns.nvim'
+" linter support
+Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
 
 "SET COLORSCHEME
@@ -47,11 +49,21 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incr
 lua require('nvim-autopairs').setup{}
 
 lua << EOF
+-- error message settings
 vim.diagnostic.config({
   virtual_text = true,
   signs = true,
   underline = true,
   update_in_insert = true,
   severity_sort = true,
+})
+
+-- setup the linters
+require("null-ls").setup({
+    sources = {
+        require("null-ls").builtins.diagnostics.flake8,
+        require("null-ls").builtins.diagnostics.cppcheck,
+        require("null-ls").builtins.diagnostics.eslint,
+    },
 })
 EOF
