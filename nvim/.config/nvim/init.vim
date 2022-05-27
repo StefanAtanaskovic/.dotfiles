@@ -25,8 +25,10 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
-"tabline
-Plug 'ojroques/nvim-hardline'
+" fancy bottom line thing
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Git signs on the left to see what is changed and stuff
 Plug 'lewis6991/gitsigns.nvim'
@@ -65,5 +67,10 @@ require("null-ls").setup({
         require("null-ls").builtins.diagnostics.cppcheck,
         require("null-ls").builtins.diagnostics.eslint,
     },
+})
+
+
+require('lualine').setup({
+options = { theme = 'gruvbox' }
 })
 EOF
