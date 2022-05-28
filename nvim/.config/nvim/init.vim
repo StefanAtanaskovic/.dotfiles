@@ -32,8 +32,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 " Git signs on the left to see what is changed and stuff
 Plug 'lewis6991/gitsigns.nvim'
-" linter support
-Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
 
 "SET COLORSCHEME
@@ -59,16 +57,6 @@ vim.diagnostic.config({
   update_in_insert = true,
   severity_sort = true,
 })
-
--- setup the linters
-require("null-ls").setup({
-    sources = {
-        require("null-ls").builtins.diagnostics.flake8,
-        require("null-ls").builtins.diagnostics.cppcheck,
-        require("null-ls").builtins.diagnostics.eslint,
-    },
-})
-
 
 require('lualine').setup({
 options = { theme = 'gruvbox' }

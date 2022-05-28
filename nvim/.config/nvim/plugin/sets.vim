@@ -12,8 +12,8 @@ set signcolumn=yes
 set expandtab
 set tabstop=4
 set ruler
-set colorcolumn=80
-highlight ColorColumn ctermbg=9
+" set colorcolumn=80
+" highlight ColorColumn ctermbg=9
 set smartindent
 set shiftwidth=4
 set nohlsearch
