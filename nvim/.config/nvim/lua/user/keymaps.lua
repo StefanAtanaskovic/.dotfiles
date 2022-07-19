@@ -36,7 +36,7 @@ keymap("n", "<leader>4", function () require("harpoon.ui").nav_file(4) end)
 keymap("n", "<leader>5", function () require("harpoon.ui").nav_file(5) end)
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
