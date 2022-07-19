@@ -1,6 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="i3,nvim,tmux"
+    STOW_FOLDERS="i3,nvim,tmux,my_bash_stuff,bg"
 fi
 
 if [[ -z $DOTFILES ]]; then
@@ -8,3 +8,5 @@ if [[ -z $DOTFILES ]]; then
 fi
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
+
+cd ~ && source .bashrc
