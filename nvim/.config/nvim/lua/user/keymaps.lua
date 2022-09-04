@@ -20,12 +20,6 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
--- Plugins --
-
 --Harpoon
 keymap("n", "<leader>s", function () require("harpoon.ui").toggle_quick_menu() end)
 keymap("n", "<leader>a", function () require("harpoon.mark").add_file() end)
@@ -39,18 +33,7 @@ keymap("n", "<leader>5", function () require("harpoon.ui").nav_file(5) end)
 keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find<CR>", opts)
-keymap("n", "<leader>fr", ":Telescope lsp_references<CR>", opts)
-
--- DAP
-keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
-keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
-keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
-keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
-keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
-keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
-keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
-keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope live_grep hidden=true<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find hidden=true<CR>", opts)
+keymap("n", "<leader>fr", ":Telescope lsp_references hidden=true<CR>", opts)

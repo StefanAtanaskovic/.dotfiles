@@ -1,3 +1,4 @@
+
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
   return
@@ -11,7 +12,7 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-    file_ignore_patterns = { ".git/", "node_modules" },
+    file_ignore_patterns = { "node_modules" },
 
     mappings = {
       i = {

@@ -15,7 +15,7 @@ selected_name=$(basename "$selected" | tr . _)
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
     tmux new -d -s $selected_name -n nvim -c $selected
     tmux send-keys -t $selected_name "nvim ." Enter
-    tmux new-window -t $selected_name -n "bash" -c $selected
+    tmux new-window -t $selected_name -n "zsh" -c $selected
     tmux attach -t $selected_name
     exit 0
 fi

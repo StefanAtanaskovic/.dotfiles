@@ -1,4 +1,4 @@
-vim.g.theprimeagen_colorscheme = "tokyonight"
+vim.g.stefan_colorscheme = "tokyonight"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'
@@ -7,7 +7,7 @@ function ColorMyPencils()
     vim.g.gruvbox_invert_selection = '0'
     vim.opt.background = "dark"
 
-    vim.cmd("colorscheme " .. vim.g.theprimeagen_colorscheme)
+    vim.cmd("colorscheme " .. vim.g.stefan_colorscheme)
 
     local hl = function(thing, opts)
         vim.api.nvim_set_hl(0, thing, opts)
@@ -40,13 +40,3 @@ function ColorMyPencils()
 
 end
 ColorMyPencils()
-
--- Vim with me
---[[
-nnoremap <leader>cmp :call ColorMyPencils()<CR>
-nnoremap <leader>vwb :let g:theprimeagen_colorscheme =
-]]
-
-
-
-
