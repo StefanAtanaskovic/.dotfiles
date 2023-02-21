@@ -3,11 +3,9 @@ local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = true }
 
---Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
+-- normal paste
+keymap("x", "<leader>p", "\"_dP")
 
--- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -37,3 +35,10 @@ keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep hidden=true<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find hidden=true<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope lsp_references hidden=true<CR>", opts)
+
+
+-- Diagnostic keymaps
+keymap('n', '[d', vim.diagnostic.goto_prev)
+keymap('n', ']d', vim.diagnostic.goto_next)
+keymap('n', '<leader>e', vim.diagnostic.open_float)
+keymap('n', '<leader>q', vim.diagnostic.setloclist)
